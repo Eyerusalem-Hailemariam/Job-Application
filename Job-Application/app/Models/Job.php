@@ -13,4 +13,10 @@ class Job extends Model
         'location',
         'created_by',
     ];
+
+    public function creator()
+{
+    return $this->belongsTo(User::class, 'created_by');
+}
+
 }
